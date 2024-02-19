@@ -1,0 +1,8 @@
+<h2>Plants</h2>
+<app-plant-form></app-plant-form>
+<div *ngIf="plants">
+    <h3>Found {{ plants.total }}</h3>
+    <div *ngFor="let plant of plants.data">
+        <h3>{{ plant.common_name }}</h3>
+    </div>
+</div>

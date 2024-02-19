@@ -1,0 +1,9 @@
+<form [formGroup]="plantForm" (submit)="submitPlantForm()">
+    <select formControlName="sunlight" name="" id="">
+        <option *ngFor="let sunlight_amount of sunlight_amounts" [ngValue]="sunlight_amount.value">
+            {{ sunlight_amount.name }}
+        </option>
+    </select>
+
+    <button type="submit" class="primary">Submit</button>
+</form>
