@@ -1,9 +1,33 @@
 <form [formGroup]="plantForm" (submit)="submitPlantForm()">
-    <select formControlName="sunlight" name="" id="">
-        <option *ngFor="let sunlight_amount of sunlight_amounts" [ngValue]="sunlight_amount.value">
-            {{ sunlight_amount.name }}
-        </option>
-    </select>
 
-    <button type="submit" class="primary">Submit</button>
+    <div class="d-flex justify-content-center py-3">
+        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+            <label class="btn btn-outline-primary" *ngFor="let sunlight_amount of sunlight_amounts">
+                <input formControlName="sunlight" type="radio" id="{{sunlight_amount.value}}" value="{{sunlight_amount.value}}">
+                {{ sunlight_amount.name }}
+            </label>
+        </div>
+    </div>
+    
+    <div class="d-flex justify-content-center py-3">
+        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+            <label class="btn btn-outline-primary" *ngFor="let cycle of cycles">
+                <input formControlName="cycle" type="radio" id="{{cycle.value}}" value="{{cycle.value}}">
+                {{ cycle.name }}
+            </label>
+        </div>
+    </div>
+
+    <div class="d-flex justify-content-center py-3">
+        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+            <label class="btn btn-outline-primary" *ngFor="let watering_amount of watering_amounts">
+                <input formControlName="watering" type="radio" id="{{watering_amount.value}}" value="{{watering_amount.value}}">
+                {{ watering_amount.name }}
+            </label>
+        </div>
+    </div>
+
+    <div class="d-flex justify-content-center py-3">
+        <button class="btn btn-primary">Submit</button>
+    </div>
 </form>

@@ -1,0 +1,12 @@
+// Variable overrides
+$body-bg: #fffcf8;
+$body-color: #1a1a1a;
+
+$theme-colors: (
+    "primary": #506f3a,
+    "secondary": #686ec1,
+    "danger": #b14c30
+);
+
+@import "node_modules/bootstrap/scss/bootstrap.scss";
+

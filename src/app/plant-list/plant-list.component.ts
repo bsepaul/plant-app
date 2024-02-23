@@ -13,8 +13,8 @@ export class PlantListComponent {
 
   constructor(private plantService: PlantsService) { }
 
-  getPlants(sunlight: string) {
-    this.plantService.getPlants(sunlight).subscribe(data => {
+  getPlants(cycle: string, sunlight: string, watering: string) {
+    this.plantService.getPlants(cycle, sunlight, watering).subscribe(data => {
       console.log(data);
       this.plants = data;
     })

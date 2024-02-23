@@ -2,7 +2,8 @@
 <app-plant-form></app-plant-form>
 <div *ngIf="plants">
     <h3>Found {{ plants.total }}</h3>
-    <div *ngFor="let plant of plants.data">
-        <h3>{{ plant.common_name }}</h3>
-    </div>
+    <ul class="list-group" *ngFor="let plant of plants.data">
+        <li class="list-group-item">{{ plant.common_name }}</li>
+    </ul>
 </div>
+
